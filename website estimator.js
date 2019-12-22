@@ -1,4 +1,7 @@
 
+function main()
+{
+
 //pricing
 
 
@@ -432,3 +435,4 @@ document.getElementById("signup").onclick = function()
 	}
 };
 
+}
