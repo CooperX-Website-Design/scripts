@@ -12,7 +12,7 @@ var productsOutput = document.getElementById("products-out");
 var total = 0; //calculated at the end of the program
 var estimationDetails = "";
 
-var pages = {units:1, price:100};
+var pages = {units:1, price:110};
 var content = {units:0, price:40};
 var blog = {units:0, price:270};
 var legal = {units:0, price:400};
