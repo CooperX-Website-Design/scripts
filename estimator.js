@@ -1,4 +1,3 @@
-
 //pricing
 
 
@@ -10,6 +9,9 @@ var productsOutput = document.getElementById("products-out");
 
 //vars and pricing
 var total = 0; //calculated at the end of the program
+var total2 = 0;//the total for a monthly plan
+var upfrontCost = 0;
+var monthlyCost = 0;
 var estimationDetails = "";
 
 var pages = {units:1, price:100};
@@ -80,7 +82,48 @@ document.getElementById("continue-3").onclick = function()
 	total += (chat.units * chat.price);
 	total += (signup.units * signup.price);
 
+	/*
+	
+	calculate monthly cost if client desires monthly payments
+	payment brackets
+	A) 0-1200
+	B) >1200-3000
+	C) >3000
+	
+	Total Project cost increses by 15% (calculated before upfront cost and monthly cost is calculated)
+	
+	brackets overlap similar to tax payment
+	
+	A) 25% Upfront
+	B) 15% Upfront
+	C) 10% Upfront
+	
+	First Monthly Payment due 1 month after going live, 12 month contract
+	Balance of project divided by 12 monthly payments
+	
+	*/
+	
+	total2 = (total*1.15) //added 15%
+	
+	if (total2 <= 1200)
+	{
+		upfrontCost = total2*0.25
+		monthlyCost = (total2-upfrontCost)/12
+	}
+	else if (total2 > 1200 && total2 <= 3000)
+	{
+		upfrontCost = (1200*0.25)+((total2-1200)*0.15)
+		monthlyCost = (total2-upfrontCost)/12
+	}
+	else if (total2 > 3000)
+	{
+		upfrontCost = (1200*0.25)+((1800)*0.15)+((total2-3000)*0.10)
+		monthlyCost = (total2-upfrontCost)/12
+	}
+
 	document.getElementById("estimation-total").innerHTML = numberWithCommas(total);
+	document.getElementById("upfront-cost").innerHTML = numberWithCommas(Math.round(upfrontCost));
+	document.getElementById("monthly-cost").innerHTML = numberWithCommas(Math.round(monthlyCost));
 	
 	//now add the estimation details to the email form
 	// a \\\n = new line
@@ -431,4 +474,3 @@ document.getElementById("signup").onclick = function()
     document.getElementById("signup").classList.remove('selected');
 	}
 };
-
