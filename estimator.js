@@ -14,18 +14,18 @@ var upfrontCost = 0;
 var monthlyCost = 0;
 var estimationDetails = "";
 
-var pages = {units:1, price:100};
-var content = {units:0, price:40};
+var pages = {units:1, price:150};
+var content = {units:0, price:60};
 var blog = {units:0, price:270};
 var legal = {units:0, price:400};
-var membership = {units:0, price:500};
+var membership = {units:0, price:700};
 var store = {units:0, price:500};
 var productsBtn = {units:0};
-var products = {units:0, price:8};
-var logo = {units:0, price:60};
-var analytics = {units:0, price:60};
+var products = {units:0, price:15};
+var logo = {units:0, price:100};
+var analytics = {units:0, price:100};
 var domain = {units:0, price:20};
-var chat = {units:0, price:60};
+var chat = {units:0, price:100};
 var signup = {units:0, price:50};
 
 document.getElementById("continue-1").onclick = function()
