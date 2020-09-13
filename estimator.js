@@ -16,7 +16,7 @@ var estimationDetails = "";
 
 var pages = {units:1, price:187};
 var content = {units:0, price:75};
-var blog = {units:0, price:337.5};
+var blog = {units:0, price:337};
 var legal = {units:0, price:500};
 var membership = {units:0, price:875};
 var store = {units:0, price:625};
