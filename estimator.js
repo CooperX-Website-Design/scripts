@@ -16,13 +16,13 @@ var estimationDetails = "";
 
 var pages = {units:1, price:187};
 var content = {units:0, price:75};
-var blog = {units:0, price:337};
+var blog = {units:0, price:400};
 var legal = {units:0, price:500};
 var membership = {units:0, price:875};
 var store = {units:0, price:625};
 var productsBtn = {units:0};
 var products = {units:0, price:15};
-var logo = {units:0, price:125};
+var logo = {units:0, price:150};
 var analytics = {units:0, price:125};
 var domain = {units:0, price:20};
 var chat = {units:0, price:125};
