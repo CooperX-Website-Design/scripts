@@ -14,7 +14,7 @@ var upfrontCost = 0;
 var monthlyCost = 0;
 var estimationDetails = "";
 
-var pages = {units:1, price:187};
+var pages = {units:1, price:250};
 var content = {units:0, price:75};
 var blog = {units:0, price:400};
 var legal = {units:0, price:500};
